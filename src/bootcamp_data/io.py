@@ -15,6 +15,8 @@ def read_orders_csv(path: Path) -> pd.DataFrame:
         },
         na_values=NA,
         keep_default_na=True,
+        engine="python",
+        on_bad_lines="skip",
     )
 
 
@@ -27,6 +29,8 @@ def read_users_csv(path: Path) -> pd.DataFrame:
         },
         na_values=NA,
         keep_default_na=True,
+        engine="python",
+        on_bad_lines="skip",
     )
 
 
